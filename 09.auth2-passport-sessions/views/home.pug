@@ -4,13 +4,17 @@ block content
   h4 App Home Page
 
   if user
-    p Logged in as 
+    p Logged in as
      ul
        li Email: #{user.email}
        li Created: #{user.createdAt}
     a(href='/user/logout') Log Out
-  if !user  
+  if !user
     p Not Logged In
-    a(href='/users/login') Log In
-  p 
-    a(href='/users/') User Page (logged in only)  
+      ul
+        li
+          a(href='/users/login') Log In
+        li
+          a(href='/users/register') Register
+  p
+    a(href='/users/') User Page (logged in only)
