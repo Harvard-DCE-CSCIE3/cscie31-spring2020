@@ -51,14 +51,14 @@ router.post('/register', auth.optional, (req, res, next)=>{
      const data  = {
          email: req.body.email,
     }
-    const user = new User();
-    user.set(data);
-    user.setPassword(req.body.password);
-    user.save().then(()=>{
+    const u = new User();
+    u.set(data);
+    u.setPassword(req.body.password);
+    u.save().then(()=>{
         if(err) {
           return next(err);
         }
-        req.session.user = user;
+        req.session.user = u;
         console.log("redirecting to user page");
         res.redirect('/users/');
     }).catch((err)=>{
