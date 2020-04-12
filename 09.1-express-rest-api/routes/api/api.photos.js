@@ -14,7 +14,7 @@ router.use((req, res, next)=>{
   // allow any domain, allow REST methods we've implemented
     'Access-Control-Allow-Origin':'*',
     'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,OPTIONS',
-    "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers",
+    "Access-Control-Allow-Headers": "Content-Type",
   // Set content-type for all api requests
     'Content-type':'application/json'
   });
